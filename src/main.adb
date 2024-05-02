@@ -5,6 +5,7 @@ procedure main is
    add : Long_Long_Integer := 3;
    time : Duration := 5.0;
    stop : Boolean := False;
+   pragma Volatile (stop);
 
    task type breaker;
    task type counter is entry start(id: in Integer);
